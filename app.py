@@ -94,7 +94,8 @@ def run_optimization(instruction, df_site, df_staff):
     else:
         for i in df.index:
             if df.at[i, "担当者"] == "未定":
-                df.at[i, "担当者"] = random.choice(["佐藤(A)", "鈴木(B)", "田中(C)"]))
+                # ↓ここを修正しました
+                df.at[i, "担当者"] = random.choice(["佐藤(A)", "鈴木(B)", "田中(C)"])
     
     # スコア計算
     for index, row in df.iterrows():
